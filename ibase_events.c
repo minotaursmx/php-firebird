@@ -118,7 +118,7 @@ static void _php_ibase_event_block(ibase_db_link *ib_link, unsigned short count,
 	 * so we can work around it.
 	 */
 
-	*l = (unsigned short) isc_event_block(event_buf, result_buf, count, events[0],
+	*l = (unsigned short) isc_event_block((ISC_UCHAR**) event_buf, (ISC_UCHAR**) result_buf, count, events[0],
 		events[1], events[2], events[3], events[4], events[5], events[6], events[7],
 		events[8], events[9], events[10], events[11], events[12], events[13], events[14]);
 
